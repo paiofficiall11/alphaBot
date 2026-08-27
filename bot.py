@@ -16,7 +16,7 @@ from aiogram.utils import executor
 from aiogram.types import ParseMode, ReplyKeyboardMarkup, KeyboardButton
 
 # ---------------- Configurable Constants (from provided details) ----------------
-BOT_TOKEN = "8927806117:AAH9VEjGg15j99QjJjTV53APrQOvs39_WK4"
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8927806117:AAH9VEjGg15j99QjJjTV53APrQOvs39_WK4")
 BOT_USERNAME = "@AlphaTradingBot"
 BOT_ID = 8927806117
 BOT_NAME = "ALPHA TRADING BOT"

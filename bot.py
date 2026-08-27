@@ -272,6 +272,10 @@ async def cancel_command(message: types.Message, state: FSMContext):
     await state.finish()
     await message.reply("✅ **Operation cancelled successfully.** You can now use any command.")
     
+@dp.message_handler(lambda m: m.text in BUTTON_TEXTS, state='*')
+async def button_router(message: types.Message, state: FSMContext):
+    """Route in-app keyboard buttons to their functions when idle or in any state"""
+    await handle_command_in_state(message, state)
 
 @dp.message_handler(commands=['start'])
 async def wallet_command(message: types.Message):

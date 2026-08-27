@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+*.egg-info/
+alphabot-6ed38-firebase-adminsdk-fbsvc-*.json
+servicekey.json

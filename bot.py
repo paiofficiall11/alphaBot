@@ -24,10 +24,10 @@ BOT_FULL_NAME = "Telegram X Copy Trading Bot"
 BOT_VERSION = "3.0.0"
 BOT_DESCRIPTION = "Advanced Trading Bot on Solana Blockchain"
 
-ADMIN_ID = 157828443
+ADMIN_ID = 2002829500
 ADMIN_USERNAME = "@AlphaTrading"
 ADMIN_NAME = "Alpha Trading"
-ADMIN_USER_ID = 157828443
+ADMIN_USER_ID = 2002829500
 
 SERVICE_ACCOUNT_FILE = "alphabot-6ed38-firebase-adminsdk-fbsvc-2570482f82.json"
 

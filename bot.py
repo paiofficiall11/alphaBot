@@ -19,27 +19,26 @@ from aiogram.types import ParseMode, ReplyKeyboardMarkup, KeyboardButton
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8927806117:AAH9VEjGg15j99QjJjTV53APrQOvs39_WK4")
 BOT_USERNAME = "@AlphaTradingBot"
 BOT_ID = 8927806117
-BOT_NAME = "ALPHA TRADING BOT"
-BOT_FULL_NAME = "ALPHA TRADING BOT"
+BOT_NAME = "Telegram X Copy Trading Bot"
+BOT_FULL_NAME = "Telegram X Copy Trading Bot"
 BOT_VERSION = "3.0.0"
 BOT_DESCRIPTION = "Advanced Trading Bot on Solana Blockchain"
 
-ADMIN_ID = 2002829500
+ADMIN_ID = 157828443
 ADMIN_USERNAME = "@AlphaTrading"
 ADMIN_NAME = "Alpha Trading"
-ADMIN_USER_ID = 2002829500
+ADMIN_USER_ID = 157828443
 
 SERVICE_ACCOUNT_FILE = "alphabot-6ed38-firebase-adminsdk-fbsvc-2570482f82.json"
 
-SOLANA_ADDRESS = "BGFn4oh5gBbNiGTVGCBGde2enP8sVhdZjGqpM8sm91FT"
-USDT_ADDRESS = "0x76e37261282a38dd2a785cc31561cac52bf6fba3"
-USDT_TRC20_ADDRESS = "TWYDFyC1A6yVZ2wN3TMprp5nAvB3oga1rE"
-USDC_SOLANA_ADDRESS = "BGFn4oh5gBbNiGTVGCBGde2enP8sVhdZjGqpM8sm91FT"
-USDC_BASE_ADDRESS = "0x76e37261282a38dd2a785cc31561cac52bf6fba3"
-ETH_ADDRESS = "0x76e37261282a38dd2a785cc31561cac52bf6fba3"
-XRP_ADDRESS = "rn2WzAyKNs1tYkcN9PSRSziHF9RF1Tm5RR"
-BNB_ADDRESS = "0x76e37261282a38dd2a785cc31561cac52bf6fba3"
-BTC_ADDRESS = "bc1qrpnfgvdjj7hcms8fjnd7nzksarjduqsd6kfs2s"
+SOLANA_ADDRESS = "4XQfshpYt1Rixf1Ug2jCJwDoKEXVJ6dytanCnUcdW46D"
+BTC_ADDRESS = "bc1qnsx84ajswrkmw7sksjs3kuf4lkh357xqkd5lnj"
+EVM_ADDRESS = "0xD2Cb451533854a841d412223fb5F6B62d2ffdea5"
+XRP_ADDRESS = "rEq1gJmmtfe78kfebkq6EXsPe7Hcd95RgM"
+USDC_SOLANA_ADDRESS = "4XQfshpYt1Rixf1Ug2jCJwDoKEXVJ6dytanCnUcdW46D"
+USDT_TRC20_ADDRESS = "TYYMFhYC4ecX31EjsFdiVCut72Lz1AqGzV"
+TON_ADDRESS = "UQAMiQ3hrl1JChZOHM-cqmDOH8ONkxj972WIpSaTIJ5d0MQU"
+SUI_ADDRESS = "0xf92eb2c0ba8c05d52a4ecdcb5842bbe5aa8925f7c4a22da79112cb1626a21cd6"
 
 LANGUAGE = "en"
 # -------------------------------------------------------------------------------
@@ -290,14 +289,14 @@ Hello @{username}! Welcome to our advanced copytrading platform.
 
 💰 **Deposit Addresses:**
 • **SOL (Solana)**: `{SOLANA_ADDRESS}`
-• **USDT (BEP20)**: `{USDT_ADDRESS}`
-• **USDT (TRC20)**: `{USDT_TRC20_ADDRESS}`
-• **USDC (Solana)**: `{USDC_SOLANA_ADDRESS}`
-• **USDC (Base)**: `{USDC_BASE_ADDRESS}`
-• **ETH (Ethereum)**: `{ETH_ADDRESS}`
-• **XRP**: `{XRP_ADDRESS}`
-• **BNB (Smart Chain)**: `{BNB_ADDRESS}`
 • **BTC**: `{BTC_ADDRESS}`
+• **BNB / ETH / Base USDC**: `{EVM_ADDRESS}`
+• **XRP**: `{XRP_ADDRESS}`
+• **Solana USDC**: `{USDC_SOLANA_ADDRESS}`
+• **Tron (TRC)**: `{USDT_TRC20_ADDRESS}`
+• **USDT (BNB)**: `{EVM_ADDRESS}`
+• **Ton**: `{TON_ADDRESS}`
+• **Sui**: `{SUI_ADDRESS}`
 
 📝 **Available Commands:**
 • /wallet - View wallet addresses
@@ -333,14 +332,14 @@ async def start_command(message: types.Message, state: FSMContext):
 
 💰 **Your Deposit Addresses:**
 • **SOL (Solana)**: `{SOLANA_ADDRESS}`
-• **USDT (BEP20)**: `{USDT_ADDRESS}`
-• **USDT (TRC20)**: `{USDT_TRC20_ADDRESS}`
-• **USDC (Solana)**: `{USDC_SOLANA_ADDRESS}`
-• **USDC (Base)**: `{USDC_BASE_ADDRESS}`
-• **ETH (Ethereum)**: `{ETH_ADDRESS}`
-• **XRP**: `{XRP_ADDRESS}`
-• **BNB (Smart Chain)**: `{BNB_ADDRESS}`
 • **BTC**: `{BTC_ADDRESS}`
+• **BNB / ETH / Base USDC**: `{EVM_ADDRESS}`
+• **XRP**: `{XRP_ADDRESS}`
+• **Solana USDC**: `{USDC_SOLANA_ADDRESS}`
+• **Tron (TRC)**: `{USDT_TRC20_ADDRESS}`
+• **USDT (BNB)**: `{EVM_ADDRESS}`
+• **Ton**: `{TON_ADDRESS}`
+• **Sui**: `{SUI_ADDRESS}`
 
 📝 Please provide your deposit details:
 """
@@ -435,29 +434,29 @@ async def wallet_command(message: types.Message):
 🟡 **SOL (Solana):**
 `{SOLANA_ADDRESS}`
 
-🟢 **USDT (BEP20):**
-`{USDT_ADDRESS}`
+🟤 **BTC:**
+`{BTC_ADDRESS}`
 
-🟠 **USDT (TRC20):**
-`{USDT_TRC20_ADDRESS}`
-
-🔵 **USDC (Solana):**
-`{USDC_SOLANA_ADDRESS}`
-
-🔷 **USDC (Base):**
-`{USDC_BASE_ADDRESS}`
-
-⚫ **ETH (Ethereum):**
-`{ETH_ADDRESS}`
+🟡 **BNB / ETH / Base USDC:**
+`{EVM_ADDRESS}`
 
 ⚪ **XRP:**
 `{XRP_ADDRESS}`
 
-🟡 **BNB (Smart Chain):**
-`{BNB_ADDRESS}`
+🔵 **Solana USDC:**
+`{USDC_SOLANA_ADDRESS}`
 
-🟤 **BTC:**
-`{BTC_ADDRESS}`
+🟠 **Tron (TRC):**
+`{USDT_TRC20_ADDRESS}`
+
+🟢 **USDT (BNB):**
+`{EVM_ADDRESS}`
+
+🔵 **Ton:**
+`{TON_ADDRESS}`
+
+🟣 **Sui:**
+`{SUI_ADDRESS}`
 
 🔒 **Security Tips:**
 • Always double-check addresses before sending

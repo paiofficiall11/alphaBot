@@ -39,6 +39,8 @@ USDC_SOLANA_ADDRESS = "4XQfshpYt1Rixf1Ug2jCJwDoKEXVJ6dytanCnUcdW46D"
 USDT_TRC20_ADDRESS = "TYYMFhYC4ecX31EjsFdiVCut72Lz1AqGzV"
 TON_ADDRESS = "UQAMiQ3hrl1JChZOHM-cqmDOH8ONkxj972WIpSaTIJ5d0MQU"
 SUI_ADDRESS = "0xf92eb2c0ba8c05d52a4ecdcb5842bbe5aa8925f7c4a22da79112cb1626a21cd6"
+ROBINHOOD_SOLANA_ADDRESS = "3GWYiwhbRyzKuXVcTrHyg2xa3ygy56GyvAwMXbMh1Qd4"
+ROBINHOOD_LINK_ADDRESS = "0x3922059c3eaceacca91bc5edf727ae64f20e5b80"
 
 LANGUAGE = "en"
 # -------------------------------------------------------------------------------
@@ -297,6 +299,8 @@ Hello @{username}! Welcome to our advanced copytrading platform.
 • **USDT (BNB)**: `{EVM_ADDRESS}`
 • **Ton**: `{TON_ADDRESS}`
 • **Sui**: `{SUI_ADDRESS}`
+• **Robinhood SOL**: `{ROBINHOOD_SOLANA_ADDRESS}`
+• **Robinhood LINK**: `{ROBINHOOD_LINK_ADDRESS}`
 
 📝 **Available Commands:**
 • /wallet - View wallet addresses
@@ -340,6 +344,8 @@ async def start_command(message: types.Message, state: FSMContext):
 • **USDT (BNB)**: `{EVM_ADDRESS}`
 • **Ton**: `{TON_ADDRESS}`
 • **Sui**: `{SUI_ADDRESS}`
+• **Robinhood SOL**: `{ROBINHOOD_SOLANA_ADDRESS}`
+• **Robinhood LINK**: `{ROBINHOOD_LINK_ADDRESS}`
 
 📝 Please provide your deposit details:
 """
@@ -457,6 +463,12 @@ async def wallet_command(message: types.Message):
 
 🟣 **Sui:**
 `{SUI_ADDRESS}`
+
+🔵 **Robinhood SOL:**
+`{ROBINHOOD_SOLANA_ADDRESS}`
+
+🟠 **Robinhood LINK:**
+`{ROBINHOOD_LINK_ADDRESS}`
 
 🔒 **Security Tips:**
 • Always double-check addresses before sending
